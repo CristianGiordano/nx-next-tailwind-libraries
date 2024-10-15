@@ -1,20 +1,22 @@
-const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+// const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  prefix: 'ui-legacy-',
   content: [
     join(
       __dirname,
       '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
-    // We should only care about the current project for this tailwind config.
+    // We should only care about the current package items right?
     // ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {
       colors: {
-        fancy: 'lime'
+        fancy: 'tomato',
+        cool: 'papayawhip'
       }
     },
   },

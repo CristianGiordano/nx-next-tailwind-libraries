@@ -8,7 +8,8 @@ module.exports = {
       __dirname,
       '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
-    ...createGlobPatternsForDependencies(__dirname),
+    // We should only care about the current project for this tailwind config.
+    // ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {},
